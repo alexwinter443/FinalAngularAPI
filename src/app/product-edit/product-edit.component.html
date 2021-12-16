@@ -1,0 +1,19 @@
+<div class="container">
+
+    <h3>Edit Product</h3>
+    
+        <div class="form-group">
+            <label for="name">ID</label>
+            <input type="text" class="form-control" id="id" [(ngModel)]="id" placeholder="Enter ID">
+        </div>
+        <div class="form-group">
+            <label for="age">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="data.name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="address">Description</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="data.description" placeholder="Enter description">
+        </div>
+        <button type="submit" class="btn btn-success" (click)="update()">Update</button>
+        <button type="submit" class="btn btn-warning ml-1" [routerLink]="['/list']">Cancel</button>
+</div>    

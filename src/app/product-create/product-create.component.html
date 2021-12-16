@@ -1,0 +1,18 @@
+<div class="container">
+
+    <h3>Create Product Record</h3>
+    
+        <div class="form-group">
+            <label for="name">ID</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="data.ID" placeholder="Enter ID">
+        </div>
+        <div class="form-group">
+            <label for="age">Name</label>
+            <input type="text" class="form-control" id="age" [(ngModel)]="data.name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="address">Description</label>
+            <input type="text" class="form-control" id="address" [(ngModel)]="data.description" placeholder="Enter Description">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="submitForm()">Add</button>
+</div>    

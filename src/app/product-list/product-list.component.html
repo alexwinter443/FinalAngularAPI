@@ -1,0 +1,26 @@
+<div class="container">
+    <h3>List All Products</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of productsData">
+          <td>{{item.ID}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>
+          <td style="display: flex">
+              <button type="button" class="btn btn-warning btn-sm" [routerLink]="['/edit/', item.ID]">Edit</button>
+              <button type="button" class="btn btn-danger btn-sm ml-1" (click)="delete(item.ID)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <button type="button" class="btn btn-success" [routerLink]="[ '/create']">Add Product</button>
+  </div>
